@@ -1,0 +1,17 @@
+print('pick a number between 1 and 1000\n')
+low = 1
+high = 1000
+num_of_guess = 0
+while True:
+  avg = (low + high) // 2
+  a = input('was your number ' + str(avg) + '?\n')
+  num_of_guess += 1
+  if a == 'yes':
+    print('i have guessed your anwser in ' + str(num_of_guess) + ' guesses')
+    break
+  elif a == 'no':
+    b = input('is your number higher or lower?\n')
+    if b == 'higher':
+      low = avg 
+    elif b == 'lower':
+      high = avg
